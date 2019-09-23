@@ -20,20 +20,20 @@ class DonationRecord extends JsonResource
                 $this->subscription->MounthDonateAmount,
                 $this->subscription->member->RefID
         );
-        return [
-            // 'id' => $this->idYear,
-            // // 'user_id' => $this->subscription->member->RefID,
-            // 'year' => $this->Year,
-            // 'unit_amount' => $this->subscription->MounthDonateAmount,
-            // 'DonateData_idDonateData' => $this->DonateData_idDonateData,
-            // // 'months' => $this->months,
-            'months' => $this->setMonths(
-                $this->months,
-                $this->Year,
-                $this->subscription->MounthDonateAmount,
-                $this->subscription->member->RefID
-                )
-        ];
+        // return [
+        //     // 'id' => $this->idYear,
+        //     // // 'user_id' => $this->subscription->member->RefID,
+        //     // 'year' => $this->Year,
+        //     // 'unit_amount' => $this->subscription->MounthDonateAmount,
+        //     // 'DonateData_idDonateData' => $this->DonateData_idDonateData,
+        //     // // 'months' => $this->months,
+        //     'months' => $this->setMonths(
+        //         $this->months,
+        //         $this->Year,
+        //         $this->subscription->MounthDonateAmount,
+        //         $this->subscription->member->RefID
+        //         )
+        // ];
     }
 
     public function setMonths($months,$year,$unitAmount, $subsId)
