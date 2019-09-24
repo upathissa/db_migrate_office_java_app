@@ -19,7 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/members', 'API\MemberController@allMembers');
 
-Route::get('/subs', 'API\MemberController@subs');
+Route::get('/subs', 'API\MemberController@subs'); 
+
+Route::get('/address', 'API\MemberController@address');
 
 Route::get('isys-members', 'API\IsysMemberController@allMembers');
 Route::get('isys', 'API\IsysMemberController@test');

@@ -15,9 +15,10 @@ class Address extends JsonResource
     public function toArray($request)
     {
         return [
-            'address01' => $this->No,
-            'address02' => $this->Addr1,
-            'city' => $this->Addr2
+            'no' => $this->No,
+            'Addr1' => $this->Addr1,
+            'Addr2' => $this->Addr2,
+            'city' => $this->city
         ];
     }
 }
