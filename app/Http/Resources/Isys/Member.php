@@ -29,10 +29,10 @@ class Member extends JsonResource
             'id' => $this->id,
             'name' => $this->nameSinFilter($this->name_sin),
             'title' => $this->titleProcess,
-            'nic' => $this->nic,
-            'email' => $this->email,
-            'landline' => $this->tp_number,
-            'mobile01' => $this->mobile_number,
+            'nic' => $this->nic !="" ? $this->nic : NULL,
+            'email' => $this->email != "" ? $this->email : NULL,
+            'landline' => $this->mobile_number != "" ? $this->mobile_number : NULL,
+            'mobile01' => $this->tp_number != "" ? $this->tp_number: Null,
             'country' => $this->country($this->country),
             'address' => $this->addressProcess(
                 $this->addr_no, $this->addr_1, $this->addr_2, $this->addr_3, $this->addr_4, $this->addr_5, $this->addr_6
