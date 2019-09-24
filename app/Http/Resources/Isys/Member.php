@@ -39,7 +39,7 @@ class Member extends JsonResource
             ),
             'register_date' => NULL,
             'subscription' => $this->subscriptionProcess($this->remark_id, $this->unit_amount, $donationMethod),
-            'staningOrder' => $this->when($this->is_staningorder, $this->staningOrder($this->so_date, $this->so_acc_number)),
+            'staningOrder' => $this->when($this->is_staningorder, $this->staningOrder($this->so_date, $this->so_acc_number, $this->bank)),
             'months' => $out
             
         ];
@@ -289,11 +289,12 @@ class Member extends JsonResource
         }
     }
 
-    private function staningOrder($so_date, $so_acc_number)
+    private function staningOrder($so_date, $so_acc_number, $bank)
     {
         return [
             'staningOrderDate' => $so_date,
-            'description' => $so_acc_number
+            'description' => $so_acc_number,
+            'bank_id' => $this->bankId($bank)
         ];
     }
 
