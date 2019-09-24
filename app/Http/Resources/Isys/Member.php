@@ -58,16 +58,16 @@ class Member extends JsonResource
         $nameMahathmiya = explode(" මහත්මිය", $name);
         
         if($this->nameHasPrefix(" මිය", $name)) {
-            $this->titleProcess = "Mrs.";
+            $this->titleProcess = "මහත්මිය";
             return $nameMiya[0];
         } elseif($this->nameHasPrefix(" මහතා", $name)){
-            $this->titleProcess = "Mr.";
+            $this->titleProcess = "මහතා";
             return $nameMahatha[0];
         }elseif($this->nameHasPrefix(" මෙනවිය", $name)){
-            $this->titleProcess = "Miss.";
+            $this->titleProcess = "මෙනවිය";
             return $nameMenaviya[0];
         }elseif($this->nameHasPrefix(" මහත්මිය", $name)){
-            $this->titleProcess = "Mrs.";
+            $this->titleProcess = "මහත්මිය";
             return $nameMahathmiya[0];
         }else{
             $this->titleProcess = NULL;
