@@ -28,6 +28,7 @@ class Member extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->nameSinFilter($this->name_sin),
+            'name_eng' => $this->name_eng,
             'title' => $this->titleProcess,
             'nic' => $this->nic !="" ? $this->nic : NULL,
             'email' => $this->email != "" ? $this->email : NULL,
