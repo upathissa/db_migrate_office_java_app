@@ -13,7 +13,7 @@ class IsysMemberController extends Controller
     private $titleProcess = "";  
     public function allMembers()
     {
-        return MemberResource::collection(Member::paginate(50));
+        return MemberResource::collection(Member::paginate(20));
         // return MemberResource::collection(Member::all());
         
         
